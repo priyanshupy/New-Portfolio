@@ -1,317 +1,165 @@
 # Priyanshu Pareta - Portfolio Website
 
-A modern, responsive portfolio website built with **FastAPI (Python)** backend and **vanilla JavaScript** frontend, showcasing professional experience, skills, achievements, and startup projects.
+A modern, responsive portfolio website showcasing my skills, experience, and projects as a Software Engineer specializing in AI, cloud, and data-heavy backends.
 
-## ✨ Features
+## 🌟 Features
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Components**: Smooth scrolling navigation and animated sections
-- **Contact Form**: Functional contact form with validation
-- **Performance Optimized**: Built with modern web practices and optimized animations
-- **SEO Friendly**: Proper meta tags and structured content
-- **Fast Backend**: FastAPI with automatic API documentation
-- **Multi-Page Structure**: Comprehensive sections for different aspects of your portfolio
-- **Startup Showcase**: Detailed case studies for your entrepreneurial projects
-- **Professional Metrics**: Highlight key achievements and impact
-- **Testimonials System**: Centralized reviews and references
+- **Journey-Style Navigation**: Smooth, slideshow-like experience between sections
+- **Responsive Design**: Optimized for all devices (desktop, tablet, mobile)
+- **Dark Theme**: Modern dark color scheme with gradient accents
+- **Interactive Elements**: Floating animations, progress bar, smooth scrolling
+- **Contact Form**: EmailJS integration for direct communication
+- **Progress Tracking**: Visual progress bar showing website navigation
+- **Touch Support**: Swipe navigation for mobile devices
+- **Keyboard Navigation**: Arrow keys, Page Up/Down, Home/End support
 
-## 🛠️ Technology Stack
-
-### Backend
-- **FastAPI** - Modern, fast web framework for building APIs with Python
-- **Uvicorn** - Lightning-fast ASGI server
-- **CORS Support** - Cross-origin request handling
-- **Automatic API Docs** - Interactive documentation at `/docs`
+## 🚀 Tech Stack
 
 ### Frontend
-- **Vanilla JavaScript** - No framework dependencies
-- **Tailwind CSS** - Utility-first CSS framework
-- **Font Awesome** - Professional icons
-- **Google Fonts** - Beautiful typography
-- **Responsive Design** - Mobile-first approach
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Custom styling with gradients, animations, and responsive design
+- **JavaScript (ES6+)**: Interactive functionality and smooth animations
+- **Bootstrap 5**: Responsive grid system and components
+- **Font Awesome**: Professional icons throughout the interface
+- **Google Fonts**: Inter font family for modern typography
+
+### External Services
+- **EmailJS**: Contact form email functionality
+- **CDN Resources**: Bootstrap, Font Awesome, Google Fonts
 
 ## 📁 Project Structure
 
 ```
 Portfolio/
-├── main.py              # FastAPI application
-├── start.py             # Backend startup script
-├── requirements.txt     # Python dependencies
-├── index.html          # Main HTML file (multi-page structure)
-├── script.js           # JavaScript functionality
-├── startup-rise-lift-repeat.html  # Rise Lift Repeat case study
-├── startup-matchmate-ai.html      # MatchMate AI case study
-└── README.md           # Project documentation
+├── index.html          # Main HTML file with all content
+├── script.js           # JavaScript functionality and animations
+├── images/             # Image assets
+│   ├── headshot.jpeg   # Profile photo
+│   ├── pricebook-dashboard.svg    # Project placeholder
+│   ├── menu-themes.svg # Project placeholder
+│   └── README.md       # Image replacement instructions
+├── resume.pdf          # Downloadable resume
+└── README.md           # This file
 ```
 
-## 🚀 Quick Start
+## 🎯 Sections
 
-### 1. Install Python Dependencies
+1. **Hero**: Introduction with key metrics and quick links
+2. **About**: Personal background, skills, and tech stack
+3. **Journey**: Professional experience timeline
+4. **Startups**: Current entrepreneurial projects
+5. **Projects**: Technical projects and achievements
+6. **Contact**: Contact information and message form
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Any modern web browser (Chrome, Firefox, Safari, Edge)
+- No server setup required - this is a static website
+
+### Running the Website
+
+#### Option 1: Direct File Opening (Simplest)
+1. Navigate to the Portfolio folder
+2. Double-click `index.html`
+3. Website opens in your default browser
+
+#### Option 2: Live Server (Development)
+If you have VS Code:
+1. Install "Live Server" extension
+2. Right-click `index.html` → "Open with Live Server"
+
+#### Option 3: Python HTTP Server
 ```bash
-pip install -r requirements.txt
+cd Portfolio
+python -m http.server 8000
+# Open http://localhost:8000
 ```
 
-### 2. Start the Backend Server
+#### Option 4: Node.js HTTP Server
 ```bash
-python start.py
-```
-Or alternatively:
-```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
-### 3. Open the Frontend
-Simply open `index.html` in your web browser, or serve it with a local server:
-
-```bash
-# Using Python's built-in server
-python -m http.server 3000
-
-# Using Node.js (if you have it installed)
-npx serve .
-
-# Using PHP (if you have it installed)
-php -S localhost:3000
+npm install -g http-server
+cd Portfolio
+http-server
+# Open the displayed URL
 ```
 
-## 🌐 Access Points
+## ⚙️ Configuration
 
-- **Frontend**: http://localhost:3000 (or open index.html directly)
-- **Backend API**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
-- **Health Check**: http://localhost:8000/api/health
-- **Portfolio Data**: http://localhost:8000/api/portfolio
+### EmailJS Setup (Required for Contact Form)
+1. Go to [emailjs.com](https://emailjs.com) and create an account
+2. Get your **User ID**
+3. Replace `YOUR_USER_ID` in `index.html` with your actual ID
+4. Set up email service (Gmail, Outlook, etc.)
+5. Configure email template
 
-## 📱 Portfolio Sections
+### Image Replacements
+- `images/headshot.jpeg` - Your profile photo (already added)
+- `images/pricebook-dashboard.svg` - Replace with actual project screenshot
+- `images/menu-themes.svg` - Replace with actual project screenshot
+- Add more images for startups and projects as needed
 
-### 1. **Home** (`/`)
-- Eye-catching hero section with your name and title
-- Headline metrics (4+ years experience, 500+ restaurants, 100+ students)
-- Quick links to Resume, GitHub, LinkedIn, and Startups
-- Headshot dropzone for professional photo
+## 🎨 Customization
 
-### 2. **About** (`/about`)
-- Personal introduction and core copy
-- Strengths, tech stack, and what you enjoy
-- Work environment image gallery placeholders
-- Professional summary and key highlights
-
-### 3. **Journey** (`/journey`)
-- Story and timeline of your career progression
-- Educational background and work experience
-- Current status and future goals
-- Call-to-action to view startups
-
-### 4. **Startups** (`/startups`)
-- Hub showcasing your entrepreneurial projects
-- **Rise Lift Repeat**: Fitness & coaching platform
-- **MatchMate AI**: AI roommate matching
-- Links to detailed case studies
-
-### 5. **Projects** (`/projects`)
-- Featured project: Pricebook (500+ restaurants, ~60% time savings)
-- Scrapy pipelines and KPI dashboards
-- Technical architecture and impact metrics
-- Image placeholders for project screenshots
-
-### 6. **GitHub** (`/github`)
-- GitHub username: priyanshupy
-- Repository grid with top 6 repos
-- Contributions heatmap placeholder
-- Badge row with total stars, forks, and public repos
-
-### 7. **Testimonials** (`/testimonials`)
-- Featured CTO testimonial from SmartQ
-- Centralized reviews and references
-- "Add review" functionality
-- Professional feedback showcase
-
-### 8. **Contact** (`/contact`)
-- Contact form with validation
-- Contact information display
-- Availability status
-- Professional contact methods
-
-## 🔧 Customization
-
-### Personal Information
-Update the portfolio data in `main.py`:
-
-```python
-portfolio_data = {
-    "name": "Your Name",
-    "tagline": "Your Title",
-    # ... other fields
-}
-```
+### Colors
+The website uses a dark theme with:
+- Primary: Blue-purple gradient (`#667eea` to `#764ba2`)
+- Success: Green (`#10b981`)
+- Info: Cyan (`#06b6d4`)
+- Warning: Amber (`#f59e0b`)
 
 ### Styling
-Modify colors and themes in `index.html`:
+- All custom CSS is in the `<style>` section of `index.html`
+- JavaScript functionality is in `script.js`
+- Bootstrap classes provide responsive layout
 
-```html
-<style>
-    .gradient-text {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-</style>
-```
+## 📱 Responsive Features
 
-### Adding New Sections
-1. Add the HTML structure in `index.html`
-2. Add the corresponding JavaScript logic in `script.js`
-3. Update the navigation menu
-4. Add corresponding data to the backend if needed
+- **Mobile-First**: Optimized for small screens
+- **Touch Navigation**: Swipe gestures for mobile users
+- **Responsive Grid**: Bootstrap grid system adapts to screen size
+- **Mobile Enhancements**: Touch feedback and mobile-specific interactions
 
-## 📊 API Endpoints
+## 🔧 Browser Support
 
-### GET `/api/portfolio`
-Returns complete portfolio data including:
-- Personal information
-- Work experience
-- Education
-- Skills
-- Certifications
-- Hobbies
-- Startups
-- Projects
-- Testimonials
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-### GET `/api/startups`
-Returns list of startup projects.
+## 📧 Contact Form
 
-### GET `/api/startups/{startup_slug}`
-Returns specific startup details.
-
-### GET `/api/projects`
-Returns list of technical projects.
-
-### GET `/api/testimonials`
-Returns testimonials and reviews.
-
-### GET `/api/health`
-Health check endpoint for monitoring.
-
-### GET `/docs`
-Interactive API documentation (Swagger UI).
-
-## 🎨 Design Features
-
-- **Gradient Text**: Beautiful gradient text effects
-- **Card Hover Effects**: Smooth hover animations
-- **Responsive Grid**: Adaptive layouts for all screen sizes
-- **Smooth Scrolling**: Elegant navigation between sections
-- **Loading States**: Professional loading indicators
-- **Mobile Menu**: Collapsible navigation for mobile devices
-- **Multi-Page Navigation**: Seamless page transitions
-- **Professional Layout**: Clean, modern design suitable for business
-
-## 🌟 Key Benefits
-
-1. **Fast Development**: FastAPI provides rapid API development
-2. **No Build Process**: Frontend works directly without compilation
-3. **Easy Deployment**: Simple file-based structure
-4. **Modern Standards**: Uses latest web technologies
-5. **SEO Optimized**: Proper meta tags and semantic HTML
-6. **Performance**: Lightweight and fast loading
-7. **Comprehensive**: Covers all aspects of your professional profile
-8. **Startup Showcase**: Dedicated sections for entrepreneurial projects
+The contact form uses EmailJS to send emails directly to `priyanshupareta@gmail.com`. Users can:
+- Fill out name, email, and message
+- Submit directly through the website
+- Receive confirmation of successful submission
 
 ## 🚀 Deployment
 
-### Backend Deployment
-1. **Heroku**: Easy deployment with Python support
-2. **DigitalOcean**: App Platform or Droplets
-3. **AWS**: EC2 or Lambda with API Gateway
-4. **Google Cloud**: App Engine or Cloud Run
+### GitHub Pages
+1. Push code to GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Select source branch (usually `main` or `master`)
 
-### Frontend Deployment
-1. **Netlify**: Drag and drop deployment
-2. **Vercel**: Zero-config deployment
-3. **GitHub Pages**: Free hosting for static sites
-4. **AWS S3**: Static website hosting
+### Netlify
+1. Drag and drop the Portfolio folder to Netlify
+2. Automatic deployment and HTTPS
+3. Custom domain support
 
-## 🔍 Browser Support
+### Vercel
+1. Connect GitHub repository to Vercel
+2. Automatic deployments on push
+3. Global CDN and analytics
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+## 📝 License
 
-## 📈 Performance Features
-
-- Optimized animations
-- Efficient DOM manipulation
-- Compressed assets
-- Responsive images
-- Lazy loading of content
-- Smooth page transitions
-
-## 🛡️ Security Features
-
-- CORS configuration
-- Input validation
-- XSS protection
-- Secure headers
-- API rate limiting (configurable)
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 📞 Contact
-
-For questions or support, please contact:
-- **Email**: priyanshupareta@gmail.com
-- **LinkedIn**: [linkedin.com/in/priyanshu-pareta](https://linkedin.com/in/priyanshu-pareta)
-
-## 🎯 Future Enhancements
-
-- [ ] Blog section
-- [ ] Dark mode toggle
-- [ ] Multi-language support
-- [ ] Analytics integration
-- [ ] Contact form backend
-- [ ] Image optimization
-- [ ] PWA features
-- [ ] Advanced animations
-- [ ] Portfolio analytics dashboard
-- [ ] Integration with external APIs (GitHub, LinkedIn)
-
-## 🚀 Getting Started with Development
-
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package installer)
-- Modern web browser
-
-### Development Setup
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Start backend: `python start.py`
-4. Open `index.html` in your browser
-5. Make changes and refresh to see updates
-
-### File Structure Overview
-- **`main.py`**: Contains all portfolio data and API endpoints
-- **`index.html`**: Main HTML structure with all pages
-- **`script.js`**: All frontend functionality and data population
-- **`startup-*.html`**: Individual startup case study pages
-- **`start.py`**: Convenient startup script for development
+Feel free to submit issues and enhancement requests!
 
 ---
 
-**Built with ❤️ using FastAPI, Python, and Vanilla JavaScript**
-
-*This portfolio showcases the perfect blend of modern backend technologies and clean frontend development, reflecting the skills and expertise of a professional software engineer. The comprehensive structure highlights not just technical skills, but also entrepreneurial spirit and real-world impact.*
+**Built with ❤️ using modern web technologies**
