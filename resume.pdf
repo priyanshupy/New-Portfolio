@@ -1,0 +1,13 @@
+This is a placeholder for your resume PDF file.
+
+To add your actual resume:
+1. Replace this file with your actual resume.pdf
+2. Or update the quick_links.resume path in main.py to point to your resume location
+
+Your resume should include:
+- Professional summary
+- Work experience
+- Education
+- Skills
+- Certifications
+- Achievements

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchMate AI - AI Roommate Matching | Priyanshu Pareta</title>
+    <meta name="description" content="AI roommate matching using lifestyle & habit signals for better compatibility. Built with Python backend and explainable matching algorithms.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">P</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Priyanshu Pareta</span>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">← Back to Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                MatchMate AI
+            </h1>
+            <p class="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                AI roommate matching using lifestyle & habit signals for better compatibility
+            </p>
+            
+            <!-- UX Mockups Dropzone -->
+            <div class="w-full max-w-4xl mx-auto mb-12 bg-white rounded-2xl shadow-2xl p-8">
+                <div class="bg-gray-100 rounded-xl h-96 flex items-center justify-center">
+                    <div class="text-center text-gray-500">
+                        <i class="fas fa-paint-brush text-6xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2">UX Mockups</h3>
+                        <p class="text-lg">Onboarding screens, result breakdown, matching interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Problem</h2>
+                    <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                        <p class="text-red-800 text-lg">
+                            Roommate conflicts from mismatched habits. Traditional roommate matching often leads to incompatible living situations, causing stress and frequent moves.
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Solution</h2>
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                        <p class="text-green-800 text-lg">
+                            Habit & lifestyle questionnaire + explainable matching. We use AI to analyze compatibility signals and provide transparent matching rationale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Flow -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">User Journey</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-blue-600 font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Onboarding</h3>
+                        <p class="text-gray-600 text-sm">Complete lifestyle questionnaire</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-green-600 font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Signals</h3>
+                        <p class="text-gray-600 text-sm">Sleep, cleanliness, cooking, guests, pets, WFH</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-purple-600 font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Compatibility</h3>
+                        <p class="text-gray-600 text-sm">AI calculates compatibility score</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-orange-600 font-bold text-xl">4</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Match Rationale</h3>
+                        <p class="text-gray-600 text-sm">Explainable matching results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Technical Architecture</h2>
+            
+            <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-python text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Backend</h3>
+                        <p class="text-gray-600 text-sm">Python backend with scoring rules</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">ML Candidates</h3>
+                        <p class="text-gray-600 text-sm">Machine learning for matching</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Moderation</h3>
+                        <p class="text-gray-600 text-sm">Content & user verification</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-orange-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Frontend</h3>
+                        <p class="text-gray-600 text-sm">Web application interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Key Features</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clipboard-list text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Lifestyle Questionnaire</h3>
+                    <p class="text-gray-600">Comprehensive assessment of living preferences and habits</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-percentage text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Compatibility Score</h3>
+                    <p class="text-gray-600">AI-powered matching algorithm with numerical scoring</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Match Rationale</h3>
+                    <p class="text-gray-600">Transparent explanation of why matches are compatible</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-shield text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Privacy-first</h3>
+                    <p class="text-gray-600">Secure data handling and user privacy protection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Product Roadmap</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Phase 1</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Core matching algorithm</li>
+                        <li>• User onboarding</li>
+                        <li>• Basic compatibility scoring</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Phase 2</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Verified listings</li>
+                        <li>• Landlord dashboards</li>
+                        <li>• Enhanced matching</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-rocket text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Phase 3</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Post-move-in nudges</li>
+                        <li>• Community features</li>
+                        <li>• Advanced analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Product Screenshots</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+                    <div class="text-center text-gray-500">
+                        <i class="fas fa-clipboard-list text-3xl mb-2"></i><br>
+                        Onboarding Screens
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+                    <div class="text-center text-gray-500">
+                        <i class="fas fa-chart-pie text-3xl mb-2"></i><br>
+                        Result Breakdown
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+                    <div class="text-center text-gray-500">
+                        <i class="fas fa-users text-3xl mb-2"></i><br>
+                        Matching Interface
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">How does the matching algorithm work?</h3>
+                    <p class="text-gray-600">Our AI analyzes lifestyle signals like sleep patterns, cleanliness preferences, cooking habits, guest policies, pet ownership, and work-from-home arrangements to calculate compatibility scores.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Is my personal information secure?</h3>
+                    <p class="text-gray-600">Absolutely. We prioritize user privacy and implement industry-standard security measures to protect your data. All information is encrypted and never shared without consent.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">What if I don't find a good match?</h3>
+                    <p class="text-gray-600">We continuously improve our algorithm and expand our user base. You can also adjust your preferences or wait for new users to join the platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Note -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy & Security</h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Your privacy is our top priority. We use end-to-end encryption and never share your personal information with third parties. Our AI algorithms work with anonymized data to ensure your identity remains protected while finding the perfect roommate match.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">User Testimonials</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">User Name</h4>
+                            <p class="text-gray-600 text-sm">Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Found my perfect roommate through MatchMate AI. The compatibility score was spot on!"</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">User Name</h4>
+                            <p class="text-gray-600 text-sm">Professional</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The lifestyle questionnaire really helped identify what matters most for compatibility."</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">User Name</h4>
+                            <p class="text-gray-600 text-sm">Recent Graduate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Finally found someone who shares my work-from-home schedule and pet-friendly lifestyle."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">P</span>
+                </div>
+                <span class="text-2xl font-bold">Priyanshu Pareta</span>
+            </div>
+            <p class="text-gray-400 text-lg mb-8">Software Engineer & AI Enthusiast</p>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="mailto:priyanshupareta@gmail.com" class="text-gray-400 hover:text-blue-500 transition-colors duration-200">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/priyanshu-pareta" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/priyanshupy" target="_blank" class="text-gray-400 hover:text-gray-300 transition-colors duration-200">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Priyanshu Pareta. All rights reserved. Made with ❤️ in London
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

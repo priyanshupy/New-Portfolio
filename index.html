@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu Pareta — Software Engineer | AI & Cloud | Problem Solver</title>
+    <meta name="description" content="London-based Software Engineer focused on AI, cloud, and data-heavy backends. Building scalable systems and AI-first products.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://priyanshupareta.com/">
+    <meta property="og:title" content="Priyanshu Pareta — Software Engineer | AI & Cloud | Problem Solver">
+    <meta property="og:description" content="London-based Software Engineer focused on AI, cloud, and data-heavy backends. Building scalable systems and AI-first products.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://priyanshupareta.com/">
+    <meta property="twitter:title" content="Priyanshu Pareta — Software Engineer | AI & Cloud | Problem Solver">
+    <meta property="twitter:description" content="London-based Software Engineer focused on AI, cloud, and data-heavy backends. Building scalable systems and AI-first products.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .journey-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            overflow: visible;
+            padding: 6rem 0 4rem 0;
+        }
+        
+        .journey-section:nth-child(odd) {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        
+        .journey-section:nth-child(even) {
+            background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%);
+        }
+        
+        .section-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+            width: 100%;
+        }
+        
+        .section-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        /* Hero section text styling */
+        .hero-section h1 {
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-section h2 {
+            color: #e2e8f0;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-section .lead {
+            color: #cbd5e1;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-section .gradient-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .metric-card {
+            backdrop-filter: blur(10px);
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            background: rgba(26, 26, 46, 0.95);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+        
+        .quick-link-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .quick-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 2rem;
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border-color: rgba(102, 126, 234, 0.5);
+            background: rgba(26, 26, 46, 0.95);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 50%;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+        }
+        
+        .project-card {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border-color: rgba(102, 126, 234, 0.5);
+            background: rgba(26, 26, 46, 0.95);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+        
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.95);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            border: none;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin: 0.25rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+            color: white;
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            border: 2px dashed #374151;
+            transition: all 0.3s ease;
+        }
+        
+        .image-placeholder:hover {
+            background: linear-gradient(135deg, #16213e 0%, #0f172a 100%);
+            border-color: #4b5563;
+            color: #cbd5e1;
+        }
+        
+        .progress-bar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1001;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Enhanced color scheme for dark theme */
+        .text-primary {
+            color: #667eea !important;
+        }
+        
+        .text-success {
+            color: #10b981 !important;
+        }
+        
+        .text-info {
+            color: #06b6d4 !important;
+        }
+        
+        .text-warning {
+            color: #f59e0b !important;
+        }
+        
+        .bg-primary {
+            background-color: #667eea !important;
+        }
+        
+        .bg-success {
+            background-color: #10b981 !important;
+        }
+        
+        .bg-info {
+            background-color: #06b6d4 !important;
+        }
+        
+        .bg-warning {
+            background-color: #f59e0b !important;
+        }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+        
+        /* Better contrast for text on dark theme */
+        .text-muted {
+            color: #9ca3af !important;
+        }
+        
+        .text-dark {
+            color: #f3f4f6 !important;
+        }
+        
+        /* Enhanced button styles for dark theme */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+        }
+        
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Fix the email button specifically */
+        .btn-outline-light:has(i.fa-envelope) {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-outline-light:has(i.fa-envelope):hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            color: white;
+        }
+        
+        /* Enhanced hero section text */
+        .hero-section .opacity-90 {
+            opacity: 1 !important;
+        }
+        
+        .hero-section .lead {
+            color: #e2e8f0 !important;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Better metric card text */
+        .metric-card .text-muted {
+            color: #9ca3af !important;
+            font-weight: 500;
+        }
+        
+        .metric-card .h2 {
+            font-weight: 700;
+        }
+        
+        /* Enhanced navigation for dark theme */
+        .navbar-brand {
+            color: #ffffff !important;
+        }
+        
+        .nav-link {
+            color: #d1d5db !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: #667eea !important;
+        }
+        
+        .nav-link.active {
+            color: #667eea !important;
+            font-weight: 600;
+        }
+        
+        /* Better section backgrounds for dark theme */
+        .journey-section:nth-child(odd) {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        
+        .journey-section:nth-child(even) {
+            background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%);
+        }
+        
+        /* Enhanced floating elements */
+        .floating-element {
+            opacity: 0.1;
+        }
+        
+        /* Better card shadows and borders for dark theme */
+        .card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            background: rgba(26, 26, 46, 0.8);
+            color: #ffffff;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+            border-color: rgba(102, 126, 234, 0.3);
+            background: rgba(26, 26, 46, 0.95);
+        }
+        
+        /* Enhanced timeline items for dark theme */
+        .timeline-item {
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            background: rgba(26, 26, 46, 0.8);
+            color: #ffffff;
+        }
+        
+        .timeline-item:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+            background: rgba(26, 26, 46, 0.95);
+        }
+        
+        /* Better project cards for dark theme */
+        .project-card {
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            background: rgba(26, 26, 46, 0.8);
+            color: #ffffff;
+        }
+        
+        .project-card:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+            background: rgba(26, 26, 46, 0.95);
+        }
+        
+        /* Enhanced tech badges */
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+        }
+        
+        /* Better image placeholders for dark theme */
+        .image-placeholder {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #94a3b8;
+            border: 2px dashed #374151;
+        }
+        
+        .image-placeholder:hover {
+            background: linear-gradient(135deg, #16213e 0%, #0f172a 100%);
+            border-color: #4b5563;
+            color: #cbd5e1;
+        }
+        
+        /* Form controls for dark theme */
+        .form-control {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+        }
+        
+        .form-control:focus {
+            background: rgba(26, 26, 46, 0.95);
+            border-color: rgba(102, 126, 234, 0.5);
+            color: #ffffff;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        .form-label {
+            color: #e2e8f0;
+        }
+        
+        /* Badge colors for dark theme */
+        .badge.bg-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+        
+        .badge.bg-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+        }
+        
+        .badge.bg-info {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%) !important;
+        }
+        
+        .badge.bg-warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#hero">
+                <div class="bg-gradient-primary rounded-lg p-2 me-2">
+                    <span class="text-white fw-bold fs-4">P</span>
+                </div>
+                <span class="fw-bold fs-4 text-white">Priyanshu Pareta</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey">Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#startups">Startups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="journey-section hero-section">
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 20%; right: 10%; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.2);"></div>
+            <div class="floating-element" style="bottom: 20%; left: 10%; width: 80px; height: 80px; background: rgba(255, 255, 255, 0.15);"></div>
+        </div>
+        
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="section-content">
+                        <h1 class="display-3 fw-bold mb-4">
+                            Hi, I'm <span class="gradient-text">Priyanshu Pareta</span>
+                        </h1>
+                        <h2 class="h3 mb-4 opacity-90">Software Engineer · AI & Cloud · Problem Solver</h2>
+                        <p class="lead mb-5 opacity-90">
+                            I build AI informed, cloud native backends in London that teams trust. From Python services on GCP to event driven pipelines, I convert complexity into reliability and make high volume products easier to operate and improve.
+                        </p>
+                        
+                                                 <!-- Metrics -->
+                         <div class="row g-4 mb-5">
+                             <div class="col-md-4">
+                                 <div class="metric-card p-4 text-center">
+                                     <div class="mb-3">
+                                         <i class="fas fa-cloud fa-2x text-primary"></i>
+                                     </div>
+                                     <div class="h2 fw-bold text-primary mb-2">4+</div>
+                                     <div class="text-muted">Years of Building Scalable Cloud Backend Systems</div>
+                                 </div>
+                             </div>
+                             <div class="col-md-4">
+                                 <div class="metric-card p-4 text-center">
+                                     <div class="mb-3">
+                                         <i class="fas fa-trophy fa-2x text-success"></i>
+                                     </div>
+                                     <div class="h2 fw-bold text-success mb-2">£1500</div>
+                                     <div class="text-muted">Winner of Northeastern University London Entrepreneurship Bootcamp</div>
+                                 </div>
+                             </div>
+                             <div class="col-md-4">
+                                 <div class="metric-card p-4 text-center">
+                                     <div class="mb-3">
+                                         <i class="fas fa-chalkboard-teacher fa-2x text-info"></i>
+                                     </div>
+                                     <div class="h2 fw-bold text-info mb-2">50+</div>
+                                     <div class="text-muted">Students Taught as Ambassador Level Tutor</div>
+                                 </div>
+                             </div>
+                         </div>
+                        
+                        <!-- CTA Button -->
+                        <div class="mb-5">
+                            <a href="#about" class="cta-button">
+                                <i class="fas fa-arrow-down me-2"></i>
+                                Click here to know about me
+                            </a>
+                        </div>
+                        
+                        <!-- Quick Links -->
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="https://github.com/priyanshupy" target="_blank" class="btn btn-dark quick-link-btn">
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/priyanshu-pareta" target="_blank" class="btn btn-primary quick-link-btn">
+                                <i class="fab fa-linkedin me-2"></i>LinkedIn
+                            </a>
+                            <a href="mailto:priyanshupareta@gmail.com" class="btn btn-outline-light quick-link-btn">
+                                <i class="fas fa-envelope me-2"></i>Email
+                            </a>
+                            <a href="https://www.superprof.co.uk/tutoring-lessons-and-assignment-help-with-data-analysis-python-sql-databases-mysql-data-science-and-more.html"
+                                class="btn btn-outline-light quick-link-btn d-inline-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBjQ-4g_VlNXI7x8yxMTjaAfSF-71R4u81w&s" alt="Email" width="18" height="18" class="me-2" />
+                                Superprof Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- About Section -->
+    <section id="about" class="journey-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-content">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 fw-bold mb-3">About Me</h2>
+                            <p class="lead text-muted">I'm a 26-year-old software engineer in London who enjoys solving real problems</p>
+                        </div>
+                        
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6">
+                                                                 <img src="images/headshot.jpeg" alt="Priyanshu Pareta" class="img-fluid rounded mb-4" style="max-width: 300px; height: auto;">
+                                
+                                <h3 class="h4 fw-bold mb-3">What I'm great at</h3>
+                                <p class="text-muted mb-4">
+                                    Designing and delivering cloud-native backends in Python on GCP. Building APIs and services that scale, 
+                                    instrumenting them with metrics and logs, and keeping data flowing between SQL/NoSQL stores and queues.
+                                    From designing and building the backend to deploying it to the cloud, I've done it all.
+                                </p>
+                                
+                                <div class="mb-4">
+                                    <h4 class="h6 fw-bold mb-2">Tech Stack</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">GCP</span>
+                                        <span class="tech-badge">Flask</span>
+                                        <span class="tech-badge">Kafka</span>
+                                        <span class="tech-badge">Redis</span>
+                                        <span class="tech-badge">AWS</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">Pandas</span>
+                                        <span class="tech-badge">SQL</span>
+                                        <span class="tech-badge">NoSQL</span>
+                                        <span class="tech-badge">Data Analysis</span>
+                                        <span class="tech-badge">Data Visualization</span>
+                                        <span class="tech-badge">Data Pipelines</span>
+                                        <span class="tech-badge">Event Driven Architecture</span>
+                                        <span class="tech-badge">Microservices</span>
+                                        <span class="tech-badge">Git</span>
+                                        <span class="tech-badge">Agile</span>
+                                        <span class="tech-badge">API Development</span>
+                                        <span class="tech-badge">Web Scraping</span>
+                                        <span class="tech-badge">System Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold mb-3">Snapshot</h4>
+                                        <p class="text-muted mb-3">
+                                            I specialise in backend systems, event-driven design, and data pipelines. 
+                                            I've led builds that support 500+ restaurants, mentored 50+ learners as an ambassador-level tutor, 
+                                            and I'm currently completing an MSc in AI and Computer Science at Northeastern University London.
+                                        </p>
+                                        
+                                        <h5 class="fw-bold mb-2">What I believe in</h5>
+                                        <ul class="text-muted">
+                                            <li>Measurable impact</li>
+                                            <li>Clear communication</li>
+                                            <li>Shipping with ownership</li>
+                                        </ul>
+                                        
+                                        <h5 class="fw-bold mb-2">What I care about</h5>
+                                        <ul class="text-muted">
+                                            <li>Clarity in code</li>
+                                            <li>Observability</li>
+                                            <li>Making complex systems understandable</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-content">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 fw-bold mb-3">My Journey</h2>
+                            <p class="lead text-muted">From data dashboards to scalable systems</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-lg-6 mb-4">
+                                <div class="timeline-item h-100">
+                                    <h4 class="fw-bold mb-2">SmartQ (Compass Group)</h4>
+                                    <p class="text-muted mb-2">Software Engineer 2 • Jan 2022 – Jan 2025</p>
+                                    <ul class="fa-ul mb-3">
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Designed and led Pricebook, a menu management platform used by <strong>500+ restaurants</strong>, cutting planning time by about <strong>60%</strong>.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Enabled syncing of menus to <strong>100+ restaurants</strong> simultaneously, significantly improving operational efficiency and scalability.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Designed the Menu Themes product and database, leading the backend team and partnering with Product and UX to enable quarterly menus, seamless switching, and planning between Pricebook and live menus while reusing existing platform features instead of rebuilding.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Integrated GS1 and Matrix standards for seamless, accurate data flow across platforms.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Worked on the control desk platform and implemented multiple new features.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Mentored junior engineers, fostering skill growth and cross-team collaboration.</li>
+                                      </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-primary">Python</span>
+                                        <span class="badge bg-primary">Flask</span>
+                                        <span class="badge bg-primary">GCP</span>
+                                        <span class="badge bg-primary">Kafka</span>
+                                        <span class="badge bg-primary">SQL</span>
+                                        <span class="badge bg-primary">NoSQL</span>
+                                        <span class="badge bg-primary">Data Analysis</span>
+                                        <span class="badge bg-primary">Data Visualization</span>
+                                        <span class="badge bg-primary">Data Pipelines</span>
+                                        <span class="badge bg-primary">Event Driven Architecture</span>
+                                        <span class="badge bg-primary">Microservices</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="timeline-item h-100">
+                                    <h4 class="fw-bold mb-2">StartUs Insights</h4>
+                                    <p class="text-muted mb-2">Python Developer • Oct 2021 – Jan 2022</p>
+                                    <ul class="fa-ul mb-3">
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Developed <strong>50+ web scrapers</strong> using Python and Scrapy to gather critical business intelligence across multiple domains.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Implemented robust error handling and data validation to ensure high-quality, reliable data extraction.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Collaborated with data analysts and business teams to tailor scraping solutions to evolving research requirements.
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-success">Python</span>
+                                        <span class="badge bg-success">Scrapy</span>
+                                        <span class="badge bg-info">Pandas</span>
+                                        <span class="badge bg-success">Data Validation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="timeline-item h-100">
+                                    <h4 class="fw-bold mb-2">Netenrich</h4>
+                                    <p class="text-muted mb-2">Software Engineer • Apr 2021 – Oct 2021</p>
+                                    <ul class="fa-ul mb-3">
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Designed and developed automated KPI dashboards to monitor <strong>real-time business metrics</strong> and support informed decisions.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Built <strong>scalable reporting systems</strong> that replaced manual report generation, saving time and minimizing errors.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Enhanced <strong>system integrations</strong> to streamline data flow across multiple sources, improving overall data accuracy.
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-info">Python</span>
+                                        <span class="badge bg-info">Pandas</span>
+                                        <span class="badge bg-info">Data Visualization</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="timeline-item h-100">
+                                    <h4 class="fw-bold mb-2">Education</h4>
+                                    <p class="text-muted mb-2">MSc AI & CS • Northeastern University London</p>
+                                    <ul class="fa-ul mb-3">
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        I am currently pursuing an <strong>MSc in AI and Computer Science</strong> at <strong>Northeastern University London</strong>, focusing on intelligent systems, cloud-scale backends, and practical machine learning, with an expected completion in <strong>January 2026</strong>.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        I am a <strong>scholarship recipient</strong>, recognized for academic performance and professional impact, which supports my advanced coursework and research in AI and software engineering.
+                                        </li>
+                                        <li>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        I am an <strong>Entrepreneurship Bootcamp winner</strong> at Northeastern University London, acknowledged for leading a well-researched, execution-ready product concept and demonstrating strong customer discovery, teamwork, and pitching skills.
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-warning">AI</span>
+                                        <span class="badge bg-warning">Machine Learning</span>
+                                        <span class="badge bg-warning">Computer Science</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Startups Section -->
+    <section id="startups" class="journey-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-content">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 fw-bold mb-3">Startups I'm Building</h2>
+                            <p class="lead text-muted">AI-first products that measurably improve daily workflows</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="project-card">
+                                    <div class="card-body p-4">
+                                        <div class="text-center mb-4">
+                                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                                <i class="fas fa-dumbbell fa-2x text-white"></i>
+                                            </div>
+                                            <h4 class="fw-bold">Rise Lift Repeat</h4>
+                                            <p class="text-muted">Fitness and coaching platform</p>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <h6 class="fw-bold">Problem</h6>
+                                            <p class="text-muted small">Generic plans lack adherence and personalization.</p>
+                                            
+                                            <h6 class="fw-bold">Solution</h6>
+                                            <p class="text-muted small">Curated workout and meal plans, progress tracking, and social feed. Trainer dashboards and personalised programs are next.</p>
+                                            
+                                            <h6 class="fw-bold">Tech Stack</h6>
+                                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                                <span class="badge bg-primary">Python</span>
+                                                <span class="badge bg-primary">Flask</span>
+                                                <span class="badge bg-primary">GCP</span>
+                                                <span class="badge bg-primary">SQL</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://riseliftrepeat.com" target="_blank" class="btn btn-primary w-100">
+                                            Visit Rise Lift Repeat
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="project-card">
+                                    <div class="card-body p-4">
+                                        <div class="text-center mb-4">
+                                            <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                                <i class="fas fa-robot fa-2x text-white"></i>
+                                            </div>
+                                            <h4 class="fw-bold">MatchMate AI</h4>
+                                            <p class="text-muted">AI-powered roommate matching</p>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <h6 class="fw-bold">Problem</h6>
+                                            <p class="text-muted small">Roommate conflicts from mismatched habits.</p>
+                                            
+                                            <h6 class="fw-bold">Solution</h6>
+                                            <p class="text-muted small">Habit & lifestyle questionnaire + explainable matching algorithm for better compatibility.</p>
+                                            
+                                            <h6 class="fw-bold">Tech Stack</h6>
+                                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                                <span class="badge bg-success">Python</span>
+                                                <span class="badge bg-success">AI/ML</span>
+                                                <span class="badge bg-success">Web App</span>
+                                                <span class="badge bg-success">Matching Algorithm</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-outline-success w-100" disabled>
+                                            Coming Soon
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Projects Section -->
+    <section id="projects" class="journey-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-content">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 fw-bold mb-3">Projects I'm Proud Of</h2>
+                            <p class="lead text-muted">Scalable systems that make a real impact</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="project-card">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold mb-2">Pricebook</h4>
+                                        <p class="text-primary fw-semibold mb-3">500+ restaurants; ~60% faster planning</p>
+                                        
+                                        <div class="mb-4">
+                                            <h6 class="fw-bold">Key Highlights</h6>
+                                            <ul class="text-muted small">
+                                                <li>Menu Themes DB for quarterly cycles</li>
+                                                <li>GS1/Matrix integrations</li>
+                                                <li>Scheduled syncs with notifications</li>
+                                                <li>Operational tooling</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <h6 class="fw-bold">Tech Stack</h6>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary">Python</span>
+                                                <span class="badge bg-primary">Flask</span>
+                                                <span class="badge bg-primary">GCP</span>
+                                                <span class="badge bg-primary">Kafka</span>
+                                                <span class="badge bg-primary">MySQL</span>
+                                                <span class="badge bg-primary">Redis</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                                         <div class="col-lg-6">
+                                 <div class="project-card">
+                                     <div class="card-body p-4">
+                                         <h4 class="fw-bold mb-2">Menu Themes Planner</h4>
+                                         <p class="text-primary fw-semibold mb-3">Quarterly menu planning with real-time controls</p>
+                                         
+                                         <div class="mb-4">
+                                             <h6 class="fw-bold">Features</h6>
+                                             <ul class="text-muted small">
+                                                 <li>Real-time planning controls</li>
+                                                 <li>Clear rollout visibility</li>
+                                                 <li>Menu cycle management</li>
+                                                 <li>Integration with Pricebook</li>
+                                             </ul>
+                                         </div>
+                                         
+                                         <div class="mb-4">
+                                             <h6 class="fw-bold">Tech Stack</h6>
+                                             <div class="d-flex flex-wrap gap-2">
+                                                 <span class="badge bg-primary">Python</span>
+                                                 <span class="badge bg-primary">Flask</span>
+                                                 <span class="badge bg-primary">GCP</span>
+                                                 <span class="badge bg-primary">SQL</span>
+                                                 <span class="badge bg-primary">Redis</span>
+                                                 <span class="badge bg-primary">Event-Driven</span>
+                                             </div>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                             <div class="col-lg-6">
+                                 <div class="project-card">
+                                     <div class="card-body p-4">
+                                         <h4 class="fw-bold mb-2">Perplexity Clone RAG System</h4>
+                                         <p class="text-success fw-semibold mb-3">AI-powered question answering with document retrieval</p>
+                                         
+                                         <div class="mb-4">
+                                             <h6 class="fw-bold">Features</h6>
+                                             <ul class="text-muted small">
+                                                 <li>Document ingestion and vectorization</li>
+                                                 <li>Semantic search and retrieval</li>
+                                                 <li>AI-powered answer generation</li>
+                                                 <li>Source citation and references</li>
+                                                 <li>Real-time document processing</li>
+                                             </ul>
+                                         </div>
+                                         
+                                         <div class="mb-4">
+                                             <h6 class="fw-bold">Tech Stack</h6>
+                                             <div class="d-flex flex-wrap gap-2">
+                                                 <span class="badge bg-success">Python</span>
+                                                 <span class="badge bg-success">LangChain</span>
+                                                 <span class="badge bg-success">OpenAI API</span>
+                                                 <span class="badge bg-success">Pinecone</span>
+                                                 <span class="badge bg-success">FastAPI</span>
+                                                 <span class="badge bg-success">React</span>
+                                                 <span class="badge bg-success">Vector DB</span>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="d-flex gap-2">
+                                             <a href="https://github.com/jirimotejlek/Recurser" target="_blank" class="btn btn-success flex-fill">
+                                                 <i class="fab fa-github me-2"></i>View on GitHub
+                                             </a>
+                                             <button class="btn btn-outline-success" disabled>
+                                                 Demo Soon
+                                             </button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Contact Section -->
+    <section id="contact" class="journey-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-content">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 fw-bold mb-3">Get In Touch</h2>
+                            <p class="lead text-muted">I'm always interested in new opportunities and collaborations</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold mb-4">Contact Information</h4>
+                                        
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-envelope text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0">Email</h6>
+                                                <a href="mailto:priyanshupareta@gmail.com" class="text-muted text-decoration-none">priyanshupareta@gmail.com</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-phone text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0">Phone</h6>
+                                                <a href="tel:+4407552849879" class="text-muted text-decoration-none">+44 07552849879</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fab fa-linkedin text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0">LinkedIn</h6>
+                                                <a href="https://linkedin.com/in/priyanshu-pareta" target="_blank" class="text-muted text-decoration-none">linkedin.com/in/priyanshu-pareta</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4 p-3 bg-light rounded">
+                                            <h6 class="fw-bold text-primary mb-2">Availability</h6>
+                                            <p class="text-muted small mb-0">Available full time from October, currently on a UK student visa, seeking an employer to sponsor a work visa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold mb-4">Send a Message</h4>
+                                        <form id="contact-form">
+                                                                                         <div class="mb-3">
+                                                 <label for="name" class="form-label">Name *</label>
+                                                 <input type="text" class="form-control" id="name" name="name" required>
+                                             </div>
+                                             <div class="mb-3">
+                                                 <label for="email" class="form-label">Email *</label>
+                                                 <input type="email" class="form-control" id="email" name="email" required>
+                                             </div>
+                                             <div class="mb-3">
+                                                 <label for="message" class="form-label">Message *</label>
+                                                 <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                             </div>
+                                            <button type="submit" class="btn btn-primary w-100">
+                                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <a href="#hero" class="btn btn-primary rounded-circle">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+         <!-- EmailJS -->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     <script>
+         (function() {
+             emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+         })();
+     </script>
+     
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
+     <script src="script.js"></script>
+</body>
+</html>

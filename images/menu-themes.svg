@@ -1,0 +1,30 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg)" rx="15" ry="15" stroke="#374151" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Schema elements -->
+  <rect x="50" y="40" width="120" height="60" fill="none" stroke="#94a3b8" stroke-width="2" rx="5"/>
+  <text x="110" y="65" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Menu</text>
+  <text x="110" y="80" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="10">id, name, price</text>
+  
+  <rect x="230" y="40" width="120" height="60" fill="none" stroke="#94a3b8" stroke-width="2" rx="5"/>
+  <text x="290" y="65" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Theme</text>
+  <text x="290" y="80" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="10">id, name, season</text>
+  
+  <rect x="140" y="140" width="120" height="60" fill="none" stroke="#94a3b8" stroke-width="2" rx="5"/>
+  <text x="200" y="165" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">MenuTheme</text>
+  <text x="200" y="180" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="10">menu_id, theme_id</text>
+  
+  <!-- Connection lines -->
+  <line x1="110" y1="70" x2="170" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="290" y1="70" x2="230" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  
+  <text x="200" y="220" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Menu Themes Schema</text>
+  <text x="200" y="235" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="12">Replace with actual schema</text>
+</svg>
+

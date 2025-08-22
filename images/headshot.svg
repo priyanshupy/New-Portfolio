@@ -1,0 +1,15 @@
+<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#bg)" rx="15" ry="15" stroke="#374151" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="150" cy="180" r="60" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="150" cy="160" r="8" fill="#94a3b8"/>
+  <path d="M 120 220 Q 150 200 180 220" stroke="#94a3b8" stroke-width="3" fill="none"/>
+  <text x="150" y="320" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Headshot</text>
+  <text x="150" y="340" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="14">Replace with your photo</text>
+</svg>
+
