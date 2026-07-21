@@ -18,7 +18,7 @@ const personal = {
   phone: "",
   linkedin: "linkedin.com/in/priyanshu-pareta",
   summary:
-    "Senior Software Engineer with 5+ years of experience delivering production software at B2B SaaS and fintech companies. Skilled at building backend systems, APIs, and cloud infrastructure that power real products — and connecting those products to the external tools and platforms businesses depend on. Known for taking full ownership of work, from early design through live deployment and ongoing support, and for translating business requirements into reliable, well-engineered solutions in close collaboration with non-technical stakeholders. MSc in Artificial Intelligence and Computer Science with Distinction (Northeastern University London).",
+    "Senior Software Engineer with 5+ years of experience delivering production software at B2B SaaS and fintech companies. Skilled at building backend systems, APIs, and cloud infrastructure that power real products and connecting those products to the external tools and platforms businesses depend on. Known for taking full ownership of work, from early design through live deployment and ongoing support, and for translating business requirements into reliable, well-engineered solutions in close collaboration with non-technical stakeholders. MSc in Artificial Intelligence and Computer Science with Distinction (Northeastern University London).",
 };
 
 // ─── Work Experience ──────────────────────────────────────────────────────────
@@ -79,9 +79,9 @@ const experience = [
 // ─── Skills ───────────────────────────────────────────────────────────────────
 const skills = [
   // Programming
-  "Python", "TypeScript", "JavaScript", "C",
+  "Python", "JavaScript", "C",
   // Frameworks
-  "Django", "FastAPI", "Flask", "React",
+  "Django", "FastAPI", "Flask",
   // Backend
   "REST API Design", "Microservices", "Event-Driven Architecture",
   "Celery", "RabbitMQ", "Kafka", "OAuth 2.0", "Webhooks", "System Design",

@@ -551,6 +551,85 @@
         .badge.bg-warning {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
         }
+
+        /* ── Skill Category Cards ────────────────────────────────────────── */
+        .skill-category-card {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-top: 3px solid var(--cat-color, #667eea);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category-card:hover {
+            transform: translateY(-4px);
+            background: rgba(26, 26, 46, 0.97);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+            border-color: rgba(255, 255, 255, 0.13);
+            border-top-color: var(--cat-color, #667eea);
+        }
+
+        .skill-cat-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-cat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.875rem;
+        }
+
+        .skill-cat-title {
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #e2e8f0;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.28rem 0.7rem;
+            border-radius: 2rem;
+            font-size: 0.775rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.07);
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background: rgba(var(--cat-rgb, 102, 126, 234), 0.2);
+            border-color: rgba(var(--cat-rgb, 102, 126, 234), 0.45);
+            color: #ffffff;
+        }
+
+        .skills-section-heading {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -611,7 +690,7 @@
                         </h1>
                         <h2 class="h3 mb-4 opacity-90">Senior Software Engineer · Backend Systems · AI & Cloud</h2>
                         <p class="lead mb-5 opacity-90">
-                            Senior Software Engineer with 5+ years of experience delivering production software at B2B SaaS and fintech companies. I build the backend systems, APIs, and cloud infrastructure that power real products — and connect them to the external tools and platforms businesses depend on. MSc in AI and Computer Science with Distinction (Northeastern University London).
+                            Senior Software Engineer with 5+ years of experience delivering production software at B2B SaaS and fintech companies. I build the backend systems, APIs, and cloud infrastructure that power real products and connect them to the external tools and platforms businesses depend on. MSc in AI and Computer Science with Distinction (Northeastern University London).
                         </p>
                         
                                                  <!-- Metrics -->
@@ -686,61 +765,33 @@
                             <h2 class="display-4 fw-bold mb-3">About Me</h2>
                             <p class="lead text-muted">Building reliable backend systems and AI-powered products in London.</p>
                         </div>
-                        
-                        <div class="row g-5 align-items-center">
+
+                        <!-- Top row: photo + summary | snapshot card -->
+                        <div class="row g-5 align-items-start mb-5">
                             <div class="col-lg-6">
                                                                  <img src="images/headshot.jpeg" alt="Priyanshu Pareta" class="img-fluid rounded mb-4" style="max-width: 300px; height: auto;">
-                                
-                                <h3 class="h4 fw-bold mb-3">What I'm great at</h3>
-                                <p class="text-muted mb-4">
-                                    Building backend systems, APIs, and cloud infrastructure that power real products. Taking full ownership from early design through live deployment and ongoing production support — and translating business requirements into reliable, well-engineered solutions in close collaboration with non-technical stakeholders.
+
+                                <h3 class="h4 fw-bold mb-3">What I do</h3>
+                                <p class="text-muted mb-0">
+                                    I build backend systems, APIs, and cloud infrastructure that power real products. I take full ownership from the first line of code through live deployment and ongoing support, working closely with business stakeholders to ship things that actually solve the problem.
                                 </p>
-                                
-                                <div class="mb-4">
-                                    <h4 class="h6 fw-bold mb-2">Tech Stack</h4>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="tech-badge">Python</span>
-                                        <span class="tech-badge">TypeScript</span>
-                                        <span class="tech-badge">JavaScript</span>
-                                        <span class="tech-badge">Django</span>
-                                        <span class="tech-badge">FastAPI</span>
-                                        <span class="tech-badge">Flask</span>
-                                        <span class="tech-badge">React</span>
-                                        <span class="tech-badge">AWS</span>
-                                        <span class="tech-badge">GCP</span>
-                                        <span class="tech-badge">Azure</span>
-                                        <span class="tech-badge">Docker</span>
-                                        <span class="tech-badge">GitHub Actions</span>
-                                        <span class="tech-badge">Kafka</span>
-                                        <span class="tech-badge">RabbitMQ</span>
-                                        <span class="tech-badge">Celery</span>
-                                        <span class="tech-badge">OAuth 2.0</span>
-                                        <span class="tech-badge">SQL</span>
-                                        <span class="tech-badge">NoSQL</span>
-                                        <span class="tech-badge">BigQuery</span>
-                                        <span class="tech-badge">LLM Applications</span>
-                                        <span class="tech-badge">RAG Pipelines</span>
-                                        <span class="tech-badge">Vector Databases</span>
-                                        <span class="tech-badge">System Design</span>
-                                    </div>
-                                </div>
                             </div>
-                            
+
                             <div class="col-lg-6">
                                 <div class="card border-0 shadow-sm">
                                     <div class="card-body p-4">
                                         <h4 class="fw-bold mb-3">Snapshot</h4>
                                         <p class="text-muted mb-3">
-                                            I specialise in backend systems, event-driven architecture, and cloud infrastructure. I've led end-to-end product builds at B2B SaaS and fintech companies, and completed an MSc in AI and Computer Science at Northeastern University London with Distinction.
+                                            I specialise in backend systems, event-driven architecture, and cloud infrastructure. I have led end-to-end product builds at B2B SaaS and fintech companies, and completed an MSc in AI and Computer Science at Northeastern University London with Distinction.
                                         </p>
-                                        
+
                                         <h5 class="fw-bold mb-2">What I believe in</h5>
                                         <ul class="text-muted">
                                             <li>Measurable impact</li>
                                             <li>Clear communication</li>
                                             <li>Shipping with ownership</li>
                                         </ul>
-                                        
+
                                         <h5 class="fw-bold mb-2">What I care about</h5>
                                         <ul class="text-muted">
                                             <li>Clarity in code</li>
@@ -751,6 +802,133 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Skills grid -->
+                        <p class="skills-section-heading">Skills</p>
+                        <div class="row g-3">
+
+                            <!-- Programming -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #667eea; --cat-rgb: 102,126,234;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                            <i class="fas fa-code text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">Programming</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">TypeScript</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">C</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Frameworks -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #10b981; --cat-rgb: 16,185,129;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                            <i class="fas fa-layer-group text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">Frameworks</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Django</span>
+                                        <span class="skill-tag">FastAPI</span>
+                                        <span class="skill-tag">Flask</span>
+                                        <span class="skill-tag">React</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Backend & APIs -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #8b5cf6; --cat-rgb: 139,92,246;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                            <i class="fas fa-server text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">Backend &amp; APIs</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">REST APIs</span>
+                                        <span class="skill-tag">Microservices</span>
+                                        <span class="skill-tag">Event Driven Architecture</span>
+                                        <span class="skill-tag">Celery</span>
+                                        <span class="skill-tag">RabbitMQ</span>
+                                        <span class="skill-tag">Kafka</span>
+                                        <span class="skill-tag">OAuth 2.0</span>
+                                        <span class="skill-tag">Webhooks</span>
+                                        <span class="skill-tag">System Design</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cloud & DevOps -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #f59e0b; --cat-rgb: 245,158,11;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                            <i class="fas fa-cloud text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">Cloud &amp; DevOps</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">AWS</span>
+                                        <span class="skill-tag">GCP</span>
+                                        <span class="skill-tag">Azure</span>
+                                        <span class="skill-tag">Docker</span>
+                                        <span class="skill-tag">Linux</span>
+                                        <span class="skill-tag">CI/CD</span>
+                                        <span class="skill-tag">GitHub Actions</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data & Storage -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #06b6d4; --cat-rgb: 6,182,212;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                                            <i class="fas fa-database text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">Data &amp; Storage</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">NoSQL</span>
+                                        <span class="skill-tag">BigQuery</span>
+                                        <span class="skill-tag">Firestore</span>
+                                        <span class="skill-tag">S3</span>
+                                        <span class="skill-tag">Data Modelling</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI & Analytics -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="skill-category-card" style="--cat-color: #ec4899; --cat-rgb: 236,72,153;">
+                                    <div class="skill-cat-header">
+                                        <div class="skill-cat-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                                            <i class="fas fa-brain text-white"></i>
+                                        </div>
+                                        <span class="skill-cat-title">AI &amp; Analytics</span>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">LLM Applications</span>
+                                        <span class="skill-tag">RAG Pipelines</span>
+                                        <span class="skill-tag">Vector Databases</span>
+                                        <span class="skill-tag">Pandas</span>
+                                        <span class="skill-tag">NumPy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end skills grid -->
+
                     </div>
                 </div>
             </div>
@@ -767,7 +945,7 @@
                     <div class="section-content">
                         <div class="text-center mb-5">
                             <h2 class="display-4 fw-bold mb-3">My Journey</h2>
-                            <p class="lead text-muted">From System Engineer to Senior Software Engineer — building systems that ship and scale</p>
+                            <p class="lead text-muted">From System Engineer to Senior Software Engineer. Building systems that ship and scale.</p>
                         </div>
                         
                         <div class="row g-4">
@@ -781,8 +959,8 @@
                                     <p class="text-muted mb-3">Senior Software Engineer • Jan 2026 – Present • London, UK</p>
                                     <ul class="fa-ul mb-3">
                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Joined as the first backend engineer; built and ran the company's software platform end-to-end, working directly with the CEO to turn business goals into shipped product.</li>
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Connected the platform to multiple external services — including e-commerce, payments, and accounting tools — managing everything from initial design through testing, launch, and live support.</li>
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Grew the platform's cloud infrastructure to handle <strong>10× customer growth</strong> (from 2 to 20+ business clients) within six months, with no downtime or performance issues.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Connected the platform to multiple external services including e-commerce, payments, and accounting tools. Managed everything from initial design through testing, launch, and live support.</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Grew the platform's cloud infrastructure to handle <strong>10x customer growth</strong> (from 2 to 20+ business clients) within six months, with no downtime or performance issues.</li>
                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Built a fully automated sign-up and onboarding flow so new customers could get started and set up payments without any manual involvement from the team.</li>
                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Built background data-processing systems to reliably import and handle large volumes of customer data (JSON and CSV), cutting processing time and reducing manual effort significantly.</li>
                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Set up automated deployment pipelines and internal developer tooling that allowed the team to ship new features faster and with fewer errors.</li>
